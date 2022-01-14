@@ -1,7 +1,12 @@
-import logo from './logo.svg';
+
+import React from 'react';
+
+
 import './App.css';
 
 import { initializeApp } from "firebase/app";
+
+import HomeContent from './HomeContent';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCGRUqj42db9BeNPPOxKihY73pT93d0r9k",
