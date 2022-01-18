@@ -1,24 +1,26 @@
-import Box from "@mui/material/Box";
-import React from "react"
-import ContentTabs from "./ContentTabs"
-import VerticalTabs from "./VerticalTabs"
 
-function NavBar() {
+import React from "react";
+import {Box,Tabs,Tab} from "@mui/material/";
 
-    const [activeTab, setActiveTab] = React.useState(0);
-  
-    const handleChange = (event, id) => {
-        setActiveTab(id);
-    };
+
+function NavBar({activeTab,handleChange,children} ) {
+
 
     return(
         <Box
             sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 224 }}
         >
-        <VerticalTabs activeTab={activeTab} handleChange={handleChange} />
-        <ContentTabs activeTab={activeTab} />
+         <Tabs
+          orientation="vertical"
+          variant="scrollable"
+          value={activeTab}
+          onChange={handleChange}
+          aria-label="Vertical tabs example"
+          sx={{ borderRight: 1, borderColor: 'divider' }}
+        >
+          {children}
+        </Tabs>
       </Box>
     )
 }
-
-export default NavBar
+export default NavBar;
