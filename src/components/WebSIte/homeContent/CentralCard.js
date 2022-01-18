@@ -9,6 +9,7 @@ import { red } from '@mui/material/colors';
 
 
 function CentralCard({children}) {
+
     
     return (
         <div className="central-card">
@@ -26,8 +27,10 @@ function CentralCard({children}) {
                         if you like.
                     </Typography>
                 </CardContent>
-
-
+                
+                {
+                    children !== undefined && children 
+                }
 
             </Card>
         </div>

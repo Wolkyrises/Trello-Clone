@@ -16,7 +16,7 @@ export default function TabPanel(props) {
     >
       {activeTab === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
