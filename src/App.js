@@ -16,10 +16,8 @@ const firebaseConfig = {
   projectId: "trello-project-bac7d",
   storageBucket: "trello-project-bac7d.appspot.com",
   messagingSenderId: "446819331212",
-  appId: "1:446819331212:web:6348faa3ccdfce9b769fa9"
+  appId: "1:446819331212:web:6348faa3ccdfce9b769fa9",
 };
-
-const app = initializeApp(firebaseConfig);
 
 function App() {
   return (

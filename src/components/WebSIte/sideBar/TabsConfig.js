@@ -1,7 +1,7 @@
 import HomeContent from '../homeContent/HomeContent'
-import ContactContent from '../homeContact/ContactContent'
+import ContactContent from'../homeContact/ContactContent'
 
-export const TabsRoutes = [
+export const TabsRoutes =[
     {
         label:'Accueil',
         component: <HomeContent/>
@@ -16,6 +16,7 @@ export const TabsRoutes = [
     },
     {
         label:'Nos Partenaires',
-        component: <h1>Nos partenaires</h1>
+        component: <h1>Nos Partenaires</h1>
     }
 ]
+
