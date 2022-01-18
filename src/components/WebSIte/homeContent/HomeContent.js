@@ -7,10 +7,15 @@ import Grid from '@mui/material/Grid';
 import { Container } from '@mui/material';
 import { flexbox } from '@mui/system';
 import Button from '@mui/material/Button';
+import {Link} from "react-router-dom";
 
 
-
-
+const linkStyle = {
+    margin: "1rem",
+    textDecoration: "none",
+    color: '#056CF2',
+    
+};
 
 function HomeContent() {
     return (
@@ -27,9 +32,8 @@ function HomeContent() {
                             <CentralCard />
                             <CentralCard >
                                
-                                    <Button variant="text">Text</Button>
-                                    <Button variant="contained">Contained</Button>
-                                    <Button variant="outlined">Outlined</Button>
+                                    
+                                    <Button variant="outlined"><Link to='/signup' style={linkStyle}>Inscrivez-vous <br/>c'est gratuit</Link></Button>
                                 
                             </CentralCard>
                         </Stack>

@@ -9,6 +9,11 @@ import WebSiteHome from './components/WebSite/WebSiteHome';
 
 
 import { initializeApp } from "firebase/app";
+import {
+  BrowserRouter as Routi,
+  Routes,
+  Route
+} from "react-router-dom";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCGRUqj42db9BeNPPOxKihY73pT93d0r9k",
