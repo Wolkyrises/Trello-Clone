@@ -1,12 +1,19 @@
 
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
-
-import './App.css';
+import WebSiteHome from './components/WebSite/WebSiteHome';
 
 import { initializeApp } from "firebase/app";
 
-import HomeContent from './HomeContent';
+import SignUp from './components/WebSite/header/SignUp';
+
+
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCGRUqj42db9BeNPPOxKihY73pT93d0r9k",
@@ -21,9 +28,12 @@ const app = initializeApp(firebaseConfig);
 
 function App() {
   return (
-    <div className="App">
-      trello
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<WebSiteHome/>} />
+        <Route path="/SignUp" element={<SignUp/>} />
+      </Routes>
+    </Router>
   );
 }
 
