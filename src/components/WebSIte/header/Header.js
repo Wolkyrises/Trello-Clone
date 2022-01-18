@@ -75,8 +75,4 @@ const Header = ({children}) => {
   )
 }
 
-<<<<<<< HEAD
 export default Header;
-=======
-export default Header;
->>>>>>> 9638ca73bb67c90ad4cdba3b8437387a047919fb
