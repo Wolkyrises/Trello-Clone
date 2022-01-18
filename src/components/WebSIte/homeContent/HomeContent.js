@@ -19,7 +19,6 @@ function HomeContent() {
                 <h1>TRELLO CLONE</h1>
                 <Grid container center >
 
-
                     <Grid xs={12} sm={12} md={8}  >
                         <Stack
                             justifyContent="center"
