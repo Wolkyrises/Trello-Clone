@@ -1,12 +1,13 @@
 
 import React from 'react';
-
-
-import './App.css';
-
+import WebSiteHome from './components/WebSite/WebSiteHome' // récupére grâce à l'index automatiquement le composant
 import { initializeApp } from "firebase/app";
+import {
+  BrowserRouter as Routi,
+  Routes,
+  Route
+} from "react-router-dom";
 
-import HomeContent from './HomeContent';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCGRUqj42db9BeNPPOxKihY73pT93d0r9k",
@@ -21,9 +22,12 @@ const app = initializeApp(firebaseConfig);
 
 function App() {
   return (
-    <div className="App">
-      trello
-    </div>
+    <Routi>
+      <Routes>
+        <Route path="/" element={<WebSiteHome/>}/>
+      </Routes>
+    </Routi>
+    
   );
 }
 

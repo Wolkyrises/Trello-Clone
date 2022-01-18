@@ -1,23 +1,42 @@
 import Box from "@mui/material/Box";
-import React from "react"
-import ContentTabs from "./ContentTabs"
-import VerticalTabs from "./VerticalTabs"
+import React from "react";
+import { makeStyles } from '@mui/styles';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
-function NavBar() {
+const useStyles = makeStyles({
+    root: {
+        color: 'white',
+        backgroundColor : '#056CF2'
+    }
+});
 
-    const [activeTab, setActiveTab] = React.useState(0);
-  
-    const handleChange = (event, id) => {
-        setActiveTab(id);
-    };
+const height = window.innerHeight - 65;
 
-    return(
+function NavBar({ activeTab, handleChange, children }) {
+
+    // const [activeTab, setActiveTab] = React.useState(0);
+
+    // const handleChange = (event, id) => {
+    //     setActiveTab(id);
+    // };
+    const classes = useStyles();
+    return (
         <Box
-            sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 224 }}
+            className={classes.root}
+            sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height :height}}
         >
-        <VerticalTabs activeTab={activeTab} handleChange={handleChange} />
-        <ContentTabs activeTab={activeTab} />
-      </Box>
+            <Tabs
+                className={classes.tab}
+                orientation="vertical"
+                value={activeTab}
+                onChange={handleChange}
+                aria-label="Vertical tabs example"
+                sx={{ borderRight: 1, borderColor: 'divider' }}
+            >
+                {children}
+            </Tabs>
+        </Box>
     )
 }
 

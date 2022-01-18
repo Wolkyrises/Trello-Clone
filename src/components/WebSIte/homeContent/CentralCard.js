@@ -27,7 +27,7 @@ function CentralCard({children}) {
                     </Typography>
                 </CardContent>
 
-
+                { children}
 
             </Card>
         </div>
